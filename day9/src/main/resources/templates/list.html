@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr data-th-each="person : ${ppList}">
+            <td data-th-text="${person.name}"></td>
+            <td data-th-text="${#dates.format(person.birthDate, 'dd/MMM/yyyy')}"></td>
+        </tr>
+    </table>
+
+    <form action="/mainpage">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>
